@@ -1,5 +1,9 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:online_order/screens/login_page.dart';
+import 'package:online_order/screens/register_page.dart';
 import 'package:online_order/themes/theme_provider.dart';
 import 'package:provider/provider.dart';
 
@@ -7,6 +11,9 @@ void main() {
   runApp(ChangeNotifierProvider(
     create: (context) => ThemeProvider(),
     child: const MyApp(),
+  ));
+  SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
+    statusBarColor: Colors.transparent,
   ));
 }
 
@@ -21,7 +28,9 @@ class MyApp extends StatelessWidget {
 
       title: 'Flutter Demo',
       theme: Provider.of<ThemeProvider>(context).themeData,
-      home: const LoginPage(),
+      home: LoginPage(
+        onTap: () {},
+      ),
     );
   }
 }
