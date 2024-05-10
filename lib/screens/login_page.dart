@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:online_order/components/my_button.dart';
 import 'package:online_order/components/my_textfield.dart';
+import 'package:online_order/screens/home_page.dart';
 
 class LoginPage extends StatefulWidget {
   final void Function() onTap;
@@ -12,8 +13,12 @@ class LoginPage extends StatefulWidget {
 
 class _LoginPageState extends State<LoginPage> {
   final TextEditingController emailController = TextEditingController();
-
   final TextEditingController passwordController = TextEditingController();
+
+  void login() {
+    Navigator.push(
+        context, MaterialPageRoute(builder: (context) => const HomePage()));
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -56,7 +61,10 @@ class _LoginPageState extends State<LoginPage> {
                 hintText: "Password",
                 obscureText: true),
             //login button
-            MyButton(text: "Login"),
+            MyButton(
+              text: "Login",
+              ontap: login,
+            ),
             //register now
 
             Row(
