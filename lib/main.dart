@@ -2,6 +2,7 @@ import 'dart:math';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:online_order/auth/login_or_register.dart';
 import 'package:online_order/screens/login_page.dart';
 import 'package:online_order/screens/register_page.dart';
 import 'package:online_order/themes/theme_provider.dart';
@@ -24,13 +25,10 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      debugShowCheckedModeBanner: false, // Debug yazısını kaldırmak için
+        debugShowCheckedModeBanner: false, // Debug yazısını kaldırmak için
 
-      title: 'Flutter Demo',
-      theme: Provider.of<ThemeProvider>(context).themeData,
-      home: LoginPage(
-        onTap: () {},
-      ),
-    );
+        title: 'Flutter Demo',
+        theme: Provider.of<ThemeProvider>(context).themeData,
+        home: const LoginOrRegister());
   }
 }
