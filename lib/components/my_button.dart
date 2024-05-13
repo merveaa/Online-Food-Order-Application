@@ -33,7 +33,7 @@ class MyButton extends StatelessWidget {
               text,
               style: TextStyle(
                 fontWeight: FontWeight.bold,
-                color: Theme.of(context).colorScheme.background,
+                color: Theme.of(context).colorScheme.primary,
                 fontSize: 15,
               ),
             ),

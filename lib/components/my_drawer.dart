@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:online_order/components/my_drawer_tile.dart';
+import 'package:online_order/screens/login_page.dart';
+import 'package:online_order/screens/settings_page.dart';
 
 class MyDrawer extends StatelessWidget {
   const MyDrawer({super.key});
@@ -32,14 +34,24 @@ class MyDrawer extends StatelessWidget {
           MyDrawerTile(
               text: "S E T T I N G S",
               icon: Icons.settings,
-              //first navigate home page then settings page
-              onTap: () => {}),
+              onTap: () {
+                Navigator.pop(context);
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => SettingsPage()));
+              }),
           Spacer(),
           MyDrawerTile(
-            text: "L O G O U T",
-            icon: Icons.logout,
-            onTap: () {},
-          ),
+              text: "L O G O U T",
+              icon: Icons.logout,
+              onTap: () {
+                Navigator.pop(context);
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => LoginPage(
+                              onTap: () {},
+                            )));
+              }),
           SizedBox(
             height: 25,
           ),
@@ -48,10 +60,3 @@ class MyDrawer extends StatelessWidget {
     );
   }
 }
-
-/**
- * 
-                    Navigator.pop(context),
-                    Navigator.push(context, MaterialPageRoute(builder: (context)=>SettingsPage())
-                  
- */
