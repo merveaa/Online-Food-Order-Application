@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:online_order/components/my_button.dart';
 import 'package:online_order/components/my_textfield.dart';
+import 'package:online_order/screens/home_page.dart';
 
 class RegisterPage extends StatefulWidget {
   final void Function() onTap;
@@ -16,6 +17,10 @@ class _RegisterPageState extends State<RegisterPage> {
   final TextEditingController passwordController = TextEditingController();
   final TextEditingController confirmPasswordController =
       TextEditingController();
+  void register() {
+    Navigator.push(
+        context, MaterialPageRoute(builder: (context) => const HomePage()));
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -67,7 +72,10 @@ class _RegisterPageState extends State<RegisterPage> {
                 obscureText: true),
 
             //login button
-            MyButton(text: "Sign Up"),
+            MyButton(
+              text: "Sign Up",
+              ontap: register,
+            ),
             //login now
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
