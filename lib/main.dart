@@ -1,20 +1,18 @@
-import 'dart:math';
-
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:online_order/auth/login_or_register.dart';
-import 'package:online_order/screens/login_page.dart';
-import 'package:online_order/screens/register_page.dart';
+import 'package:online_order/models/restaurant.dart';
 import 'package:online_order/themes/theme_provider.dart';
 import 'package:provider/provider.dart';
 
 void main() {
-  runApp(ChangeNotifierProvider(
-    create: (context) => ThemeProvider(),
+  runApp(MultiProvider(
+    providers: [
+      //theme provider
+      ChangeNotifierProvider(create: (context) => ThemeProvider()),
+      //restaurant provider
+      ChangeNotifierProvider(create: (context) => Restaurant()),
+    ],
     child: const MyApp(),
-  ));
-  SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
-    statusBarColor: Colors.transparent,
   ));
 }
 

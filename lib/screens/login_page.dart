@@ -34,7 +34,7 @@ class _LoginPageState extends State<LoginPage> {
               size: 100,
               color: Theme.of(context).colorScheme.inversePrimary,
             ),
-            SizedBox(
+            const SizedBox(
               height: 25,
             ),
             //app slogan
@@ -44,7 +44,7 @@ class _LoginPageState extends State<LoginPage> {
                   fontSize: 16,
                   color: Theme.of(context).colorScheme.inversePrimary),
             ),
-            SizedBox(
+            const SizedBox(
               height: 25,
             ),
             //email
@@ -52,7 +52,7 @@ class _LoginPageState extends State<LoginPage> {
                 controller: emailController,
                 hintText: "Email",
                 obscureText: false),
-            SizedBox(
+            const SizedBox(
               height: 10,
             ),
             //password
@@ -76,7 +76,7 @@ class _LoginPageState extends State<LoginPage> {
                       color: Theme.of(context).colorScheme.primary,
                       fontSize: 15),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 4,
                 ),
                 GestureDetector(

@@ -15,11 +15,11 @@ class MySliverAppBar extends StatelessWidget {
       pinned: true, //kaydırdığımıda appbar kalacak
       collapsedHeight: 120, // appbarın ne kadarı ekranda kalacak
       floating: false,
-      title: Text('RedTree Dinner'),
+      title: const Text('RedTree Dinner'),
       centerTitle: true,
       actions: [
         //cart button
-        IconButton(onPressed: () {}, icon: Icon(Icons.shopping_cart))
+        IconButton(onPressed: () {}, icon: const Icon(Icons.shopping_cart))
       ],
       backgroundColor: Theme.of(context).colorScheme.background,
       foregroundColor: Theme.of(context).colorScheme.inversePrimary,
@@ -32,7 +32,7 @@ class MySliverAppBar extends StatelessWidget {
         centerTitle: true,
         expandedTitleScale:
             1, //default olarak title büyüyüp küçülüyordu, bu şekilde sabitledik büyüklüğünü
-        titlePadding: EdgeInsets.only(top: 0, left: 0, right: 0),
+        titlePadding: const EdgeInsets.only(top: 0, left: 0, right: 0),
       ),
     );
   }

@@ -1,6 +1,7 @@
+import 'package:flutter/material.dart';
 import 'package:online_order/models/food.dart';
 
-class Restaurant {
+class Restaurant extends ChangeNotifier {
   //list of food
   final List<Food> _menu = [
     //burgers
@@ -208,6 +209,14 @@ class Restaurant {
         price: 2.49,
         category: FoodCategory.sides,
         availableAddons: []),
+    Food(
+      name: "Rice",
+      description: "Fluffy white rice with egg and lemon, perfectly cooked.",
+      imagePath: "assets/images/sides/rice.jpg",
+      price: 1.99,
+      category: FoodCategory.sides,
+      availableAddons: [],
+    )
   ];
 
 //GETTERS

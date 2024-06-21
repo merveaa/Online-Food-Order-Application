@@ -36,7 +36,7 @@ class _RegisterPageState extends State<RegisterPage> {
               size: 100,
               color: Theme.of(context).colorScheme.inversePrimary,
             ),
-            SizedBox(
+            const SizedBox(
               height: 25,
             ),
             //app slogan
@@ -46,7 +46,7 @@ class _RegisterPageState extends State<RegisterPage> {
                   fontSize: 16,
                   color: Theme.of(context).colorScheme.inversePrimary),
             ),
-            SizedBox(
+            const SizedBox(
               height: 25,
             ),
             //email
@@ -54,7 +54,7 @@ class _RegisterPageState extends State<RegisterPage> {
                 controller: emailController,
                 hintText: "Email",
                 obscureText: false),
-            SizedBox(
+            const SizedBox(
               height: 10,
             ),
             //password
@@ -62,7 +62,7 @@ class _RegisterPageState extends State<RegisterPage> {
                 controller: passwordController,
                 hintText: "Password",
                 obscureText: true),
-            SizedBox(
+            const SizedBox(
               height: 10,
             ),
             //confirm password
@@ -86,7 +86,7 @@ class _RegisterPageState extends State<RegisterPage> {
                       color: Theme.of(context).colorScheme.primary,
                       fontSize: 15),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 4,
                 ),
                 GestureDetector(

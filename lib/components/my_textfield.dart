@@ -23,12 +23,12 @@ class MyTextField extends StatelessWidget {
         decoration: InputDecoration(
           //normal hali için
           enabledBorder: OutlineInputBorder(
-              borderRadius: BorderRadius.all(Radius.circular(20)),
+              borderRadius: const BorderRadius.all(Radius.circular(20)),
               borderSide:
                   BorderSide(color: Theme.of(context).colorScheme.tertiary)),
           //input girerkenki hali için
           focusedBorder: OutlineInputBorder(
-              borderRadius: BorderRadius.all(Radius.circular(20)),
+              borderRadius: const BorderRadius.all(Radius.circular(20)),
               borderSide:
                   BorderSide(color: Theme.of(context).colorScheme.primary)),
           hintText: hintText,

@@ -13,7 +13,7 @@ class MyDrawer extends StatelessWidget {
       child: Column(
         children: [
           Padding(
-            padding: EdgeInsets.only(top: 60.0),
+            padding: const EdgeInsets.only(top: 60.0),
             child: Icon(
               Icons.food_bank_outlined,
               size: 75,
@@ -36,10 +36,12 @@ class MyDrawer extends StatelessWidget {
               icon: Icons.settings,
               onTap: () {
                 Navigator.pop(context);
-                Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => SettingsPage()));
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => const SettingsPage()));
               }),
-          Spacer(),
+          const Spacer(),
           MyDrawerTile(
               text: "L O G O U T",
               icon: Icons.logout,
@@ -52,7 +54,7 @@ class MyDrawer extends StatelessWidget {
                               onTap: () {},
                             )));
               }),
-          SizedBox(
+          const SizedBox(
             height: 25,
           ),
         ],
